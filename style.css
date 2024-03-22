@@ -99,16 +99,18 @@ span{
 }
 
 section{
-    padding: 70px 17% 60px;
+    
     height: 100vh;
     width: 100%;
+}
+.home{
+    padding: 70px 17% 60px;
     background-image: linear-gradient(to left, rgba(0,0,0,6),rgba(0,0,0,0.3)), url(img/Background.png);
     background-size: cover;
     background-position: bottom center;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
 }
 .home-text h5{
     font-size: 18px;
@@ -162,10 +164,10 @@ header.sticky{
     background: transparent;
     backdrop-filter: blur(35px);
 }
-.feature-content{
-    display: grid;
+/* .feature-content{
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-    align-items: center;
+    align-items: center; 
     text-align: center;
     gap: 3rem;
  
@@ -185,4 +187,36 @@ header.sticky{
     display: block;
     transition: transform 0.7s;
 
+} */
+
+.feature{
+    /* display: flex; */
+    padding: 30px 100px;
 }
+.feature-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.row-img{
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row-img img{
+    width: 150px;
+    display: block;
+    transition: transform 0.7s;
+
+} 
