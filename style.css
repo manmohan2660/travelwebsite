@@ -164,30 +164,7 @@ header.sticky{
     background: transparent;
     backdrop-filter: blur(35px);
 }
-/* .feature-content{
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-    align-items: center; 
-    text-align: center;
-    gap: 3rem;
- 
-}
-.row-img{
-    overflow: hidden;
-    height: 80px;
-    width: 80px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    cursor: pointer;
 
-}
-.row-img img{
-    width: 100%;
-    display: block;
-    transition: transform 0.7s;
-
-} */
 
 .feature{
     /* display: flex; */
@@ -220,3 +197,42 @@ header.sticky{
     transition: transform 0.7s;
 
 } 
+.row-img img:hover{
+    transform: scale(1.3);    
+}
+
+.feature-content h4{
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.50s ease;
+
+}
+
+.feature-content h4:hover{
+    color: var(--main-color);
+}
+
+.holiday{
+    display: flex;
+    grid-template-columns:  repeat(2, 1fr);
+
+    align-items: center;
+    gap: 9rem;
+}
+
+.holiday-img img{
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.holiday-text h5{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+
+}
