@@ -102,6 +102,7 @@ section{
     
     height: 100vh;
     width: 100%;
+
 }
 .home{
     padding: 70px 17% 60px;
@@ -214,11 +215,12 @@ header.sticky{
 }
 
 .holiday{
+    padding: 70px 17% 60px;
     display: flex;
     grid-template-columns:  repeat(2, 1fr);
-
     align-items: center;
     gap: 9rem;
+
 }
 
 .holiday-img img{
@@ -234,5 +236,52 @@ header.sticky{
     text-transform: uppercase;
     letter-spacing: 6px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    padding-right: 20px;
 
+}
+.holiday-text h2{
+    font-size: var(--h2-font);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+
+}
+
+.holiday-text p{
+    font-size: var(--p-font);
+    font-weight: 500;
+    line-height: 30px;
+    color: #ffffffab;
+    margin-bottom: 35px;
+
+}
+
+.tour{
+    padding: 70px 17% 60px;
+}
+
+.text-center{
+    text-align: center;
+
+}
+.text-center h2{
+    font-size: var(--h2-font);
+    font-weight: 800;
+
+}
+.tour-content{
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+
+}
+.box{
+    position: relative;
+}
+.box img{
+    width: 100%;
+    height: 100%;
 }
