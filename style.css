@@ -15,9 +15,9 @@
     --bg-color: #000;
     --main-color: #ffa343;
 
-    --h1-font: 6em;
-    --h2-font: 3em;
-    --p-font: 1em;
+    --h1-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1rem;
 }
 body{
     color: var(--text-color);
@@ -99,14 +99,14 @@ span{
 }
 
 section{
-    
-    height: 100vh;
-    width: 100%;
+    padding: 70px 17% 60px;
 
 }
 .home{
-    padding: 70px 17% 60px;
-    background-image: linear-gradient(to left, rgba(0,0,0,6),rgba(0,0,0,0.3)), url(img/Background.png);
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url(img/Background.png);
     background-size: cover;
     background-position: bottom center;
     display: flex;
@@ -148,7 +148,7 @@ section{
     font-size: 15px;
     font-weight: 600;
     border: 2px solid transparent;
-    border-radius: 10px;
+    border-radius: 6px;
     transition: all 0.50s ease;
     cursor: pointer;
 }
@@ -167,33 +167,31 @@ header.sticky{
 }
 
 
-.feature{
-    /* display: flex; */
-    padding: 30px 100px;
-}
-.feature-content{
-    width: 100%;
+/* .feature{
     display: flex;
+    padding: 30px 100px;
+} */
+.feature-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-.row{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
 }
 .row-img{
     border-radius: 50%;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+
 }
 .row-img img{
-    width: 150px;
+    width: 100%;
     display: block;
     transition: transform 0.7s;
 
@@ -215,8 +213,7 @@ header.sticky{
 }
 
 .holiday{
-    padding: 70px 17% 60px;
-    display: flex;
+    display: grid;
     grid-template-columns:  repeat(2, 1fr);
     align-items: center;
     gap: 9rem;
@@ -224,9 +221,9 @@ header.sticky{
 }
 
 .holiday-img img{
-    width: 500px;
+    width: 100%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 .holiday-text h5{
@@ -236,8 +233,7 @@ header.sticky{
     text-transform: uppercase;
     letter-spacing: 6px;
     margin-bottom: 20px;
-    flex-wrap: wrap;
-    padding-right: 20px;
+
 
 }
 .holiday-text h2{
@@ -257,11 +253,9 @@ header.sticky{
 
 }
 
-.tour{
-    padding: 70px 17% 60px;
-}
 
-.text-center{
+
+.center-text{
     text-align: center;
 
 }
@@ -272,7 +266,7 @@ header.sticky{
 }
 .tour-content{
     display: grid;
-    grid-template-columns:  repeat(2, 1fr);
+    grid-template-columns:  repeat(auto-fit, minmax(250px, auto));
     align-items: center;
     gap: 3rem;
     margin-top: 5rem;
@@ -284,4 +278,79 @@ header.sticky{
 .box img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(70%);
+    transition: all .3s cubic-bezier(.499, .05, .55, .95);
+    will-change: filter;
+    display: block;
+
+}
+
+.box h6{
+    position: absolute;
+    left: 25px;
+    bottom: 95px;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.box h4{
+    position: absolute;
+    left: 25px;
+    bottom: 65px;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+.box img:hover{
+    filter: brightness(90%) hue-rotate(50deg);
+    transform: scale(1.04);
+    cursor: pointer;
+}
+.center-btn{
+    text-align: center;
+    margin-top: 4rem;
+
+}
+
+.Culture{
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    align-items: center;
+    gap: 9rem;
+
+}
+
+.Culture-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.Culture-text h5{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+
+
+}
+.Culture-text h2{
+    font-size: var(--h2-font);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+
+}
+
+.Culture-text p{
+    font-size: var(--p-font);
+    font-weight: 500;
+    line-height: 30px;
+    color: #ffffffab;
+    margin-bottom: 35px;
+
 }
