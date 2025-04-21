@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Form</title>
+    <link rel="stylesheet" href="styles15.css">
+</head>
+<body>
+    <div class="container">
+    
+        <form class="booking-form" id="bookingForm">
+            <h2>Book Your Trip</h2>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Travel Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Book Now</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js">
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var destination = document.getElementById("destination").value;
+    var date = document.getElementById("date").value;
+    var errorMessage = "";
+
+    if (name.trim() === "") {
+        errorMessage += "Please enter your name.\n";
+    }
+
+    if (email.trim() === "") {
+        errorMessage += "Please enter your email.\n";
+    } else if (!isValidEmail(email)) {
+        errorMessage += "Please enter a valid email address.\n";
+    }
+
+    if (destination.trim() === "") {
+        errorMessage += "Please enter your destination.\n";
+    }
+
+    if (date.trim() === "") {
+        errorMessage += "Please select your travel date.\n";
+    }
+
+    if (errorMessage !== "") {
+        alert(errorMessage);
+        event.preventDefault();
+    }
+});
+
+function isValidEmail(email) {
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+    </script>
+</body>
+</html>
